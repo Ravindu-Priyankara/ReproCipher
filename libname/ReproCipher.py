@@ -38,8 +38,7 @@ def main(text):
     length = len(cipher_text)
     random_text1, key1 = random_text()
     random_text2, key2 = random_text()
-    print("Encrypted value is " + encrypt(cipher_text, key, random_text1, random_text2, key1, key2, length))
+    return (encrypt(cipher_text, key, random_text1, random_text2, key1, key2, length))
 
 if __name__ == "__main__":
-    text = "ravindu"
-    main(text)
+    print("This algorythm developed by Ravindu Priyankara")
