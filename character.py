@@ -23,5 +23,5 @@ if __name__ == "__main__":
 
     #get ascii value of uppercase letters
     for i in range(26):
-        get_ascii(lowercase_letters[i])
+        get_ascii(uppercase_letters[i])
 #EOF
