@@ -1,6 +1,8 @@
 import random
 import string
 
+random.seed(42)
+
 def substitution_cipher(text, key):
     """
     Encrypts the input text using a substitution cipher with the given key.
