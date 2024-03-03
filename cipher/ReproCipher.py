@@ -2,12 +2,19 @@
 
 import random,string
 
-random.seed(42)
+
 
 class Cipher:
     def __init__(self,text=None,key = None):
-        self.key = key if key is not None else self.encrypting_key()
-        self.text = text if text is not None else print("Text not be null.")
+        random.seed(42)
+        if text is None:
+            raise ValueError("Text cannot be None.")
+        if key is not None and (key > 25 or key < 0):
+            raise ValueError("Key must be between 0 and 25.")
+        else:
+            self.key = self.encrypting_key()
+
+        self.text = text
         self._encrypted_value = None
         self.main()
     
@@ -109,7 +116,7 @@ class Cipher:
             print(f"Error! {e}")
 
 if __name__ == "__main__":
-    cipher_instance = Cipher(text = "test")
+    cipher_instance = Cipher(text = "Hello World")
     print(cipher_instance._encrypted_value)
     #for i in range(100_000_000): cipher_instance._encrypted_value for testing purposes
     #print(cipher_instance())
